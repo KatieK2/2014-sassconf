@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Mixing</title>
+
+  <style>
+
+  g.highlight, g.shadow {
+    fill: transparent;
+    stroke-linejoin: round;
+    stroke-width: 5;
+    stroke: #e09a66;
+  }
+
+  g.shadow {
+    stroke: #8e4814;
+  }
+
+  .peak1 {
+    fill: #506b50;
+  }
+
+  .peak2 {
+    fill: #686;
+  }
+
+  .peak3 {
+    fill: #81a081;
+  }
+
+  /* set up styles ---------------------------- */
+  body {
+    background-color: #999;
+    max-width: -moz-min-content;
+  }
+
+  h1, h2, p, svg {
+    margin: 1rem;
+  }
+
+  </style>
+
+</head>
+<body>
+
+<svg id="thing" xmlns="http://www.w3.org/2000/svg" version="1.1" width="550px" height="250px">
+  <g class="shadow">
+    <polygon points="3,233 133,98 263,233" />
+    <polygon points="133,233 263,8 393,233" />
+    <polygon points="263,233 393,118 523,233" />
+  </g>
+  <g class="highlight">
+    <polygon class="peak1" points="9,237 139,102 269,237" />
+    <polygon class="peak2" points="139,237 269,12 399,237" />
+    <polygon class="peak3" points="269,237 399,122 529,237" />
+  </g>
+  <g class="main">
+    <polygon class="peak1" points="5,235 135,100 265,235" />
+    <polygon class="peak2" points="135,235 265,10 395,235" />
+    <polygon class="peak3" points="265,235 395,120 525,235" />
+  </g>
+</svg>
+
+</body>
+</html>

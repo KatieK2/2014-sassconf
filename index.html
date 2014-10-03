@@ -1,0 +1,645 @@
+<!--
+	This version from https://github.com/KatieK2/html5-slides
+	Originally from Google IO 2012/2013 HTML5 Slide Template: URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<!--This one seems to work all the time, but really small on ipad-->
+	<!--<meta name="viewport" content="initial-scale=0.4">-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" media="all" href="theme/css/default.css">
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+	<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+	<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+	<slide class="title-slide segue nobackground" style="background: url('images/133870648-2.jpg') no-repeat scroll center center / contain #e6e6e6;">
+		<aside class="gdbar"><img src="images/sassconf.png"></aside><!-- Logo on top left of title slide. -->
+		<!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+		<hgroup class="auto-fadein">
+			<h1 data-config-title style="background-color: rgba(255, 255, 255, .7); padding: .5rem 1rem;"><!-- populated from slide_config.json --></h1>
+			<p data-config-presenter style="background-color: rgba(255, 255, 255, .7); padding: .5rem 1rem;"><!-- populated from slide_config.json --></p>
+		</hgroup>
+		<p class="src">The tips of colored pencils / IvanJekic</p>
+	</slide>
+
+	<slide class="about-slide">
+		<hgroup>
+			<h2>About Me</h2>
+		</hgroup>
+		<article>
+		<ul>
+  		<li>Over 8 years of professional experience making web.*</li>
+			<li>Web Developer at Getty Images in Seattle, WA:
+				<ul>
+					<li>
+						<img src="images/logo-gi.jpg" alt="Getty Images logo" class="logo" />
+						Front end web development (HTML, CSS/Sass, JavaScript/jQuery) focused on CMS integration
+					</li>
+				</ul>
+				</li>
+		</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<ul>
+					<li>Color is just energy wavelengths we perceive with our eyeballs</li>
+					<li><a href="http://coolcosmos.ipac.caltech.edu/page/herschel_experiment">William Herschel's discovery of infrared</a></li>
+					<li>It's rods and cones</li>
+				</ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>What's color?</h2>
+		</hgroup>
+		<article>
+			<figure>
+				<img src="images/128621144-2.jpg" alt="Light Spectrum / GIPhotoStock GIPhotoStock">
+				<figcaption>Light Spectrum / GIPhotoStock GIPhotoStock</figcaption>
+			</figure>
+			<ul>
+				<li>Our eyeballs are just sensors which report those wavelengths.</li>
+				<li>Infrared and lower / ultraviolet and higher wavelengths also exist</li>
+			</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>There's no way around it; these are different color spaces.</li>
+			  </ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>Subtractive vs. Additive Color</h2>
+		</hgroup>
+		<article>
+			<div class="columns-2">
+				<h3>Subtractive</h3>
+				<figure>
+					<img style="height: 300px;" src="images/155232170-2.jpg" alt="CMY paint rolls / Jozsef Szasz-Fabian" />
+					<figcaption>CMY paint rolls / Jozsef Szasz-Fabian</figcaption>
+				</figure>
+				<ul>
+					<li>Pigments <em>absorbing</em> light</li>
+					<li>CMYK</li>
+					<li>print, e-paper</li>
+				</ul>
+				<h3>Additive</h3>
+				<figure>
+				  <img style="height: 300px;" src="images/RGB_illumination.jpg" alt="RGB illumination by en:User:Bb3cxv - http://en.wikipedia.org/wiki/Image:RGB_illumination.jpg." />
+				  <figcaption><a href="http://en.wikipedia.org/wiki/Image:RGB_illumination.jpg">"RGB illumination" by en:User:Bb3cxv</a></figcaption>
+				</figure>
+				<ul>
+					<li><em>Emitted</em> light beams</li>
+					<li>RGB</li>
+					<li>screens</li>
+				</ul>
+			</div>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<ul>
+					<li>Weighted towards in European descendants</li>
+				  <li>Why the big difference in gender?</li>
+				  <li>It's a scale, not a binary thing</li>
+				</ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>Color Blindness</h2>
+		</hgroup>
+		<article class="columns-2">
+			<p>~4% of humans have some form of color deficiency</p>
+			<ul>
+				<li>8% of men, 0.5% of women</li>
+				<li>Roughly 1 out of 25 humans</li>
+				<li>Do you still support browsers &lt; 4% of traffic?</li>
+			</ul>
+			<p>Types of colorblindness</p>
+			<ul>
+				<li>Common: no or low green-sensing</li>
+				<li>Rare: no or low red-sensing</li>
+				<li>Complete color deficiency is very rare.</li>
+			</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>This is so you have no excuse not to test</li>
+			  </ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>Testing for Colorblindness: Photoshop</h2>
+		</hgroup>
+		<article>
+			<figure class="right">
+				<img src="images/cb-photoshop.png" alt="Photoshop: View > Proof Setup > Deuteranopia-type" />
+				<figcaption>View > Proof Setup > Color Blindness > "Protanopia-type"</figcaption>
+			</figure>
+			<ul>
+				<li>View > Proof Setup > Color Blindness > "Protanopia-type" | "Deuteranopia-type"</li>
+				<li>View > Proof Colors</li>
+			</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<hgroup>
+			<h2>SassConf.com</h2>
+		</hgroup>
+		<article>
+			<figure>
+				<img src="images/sassconf-color-test.png" alt="SassConf site with Deuteranopia vision" />
+				<figcaption style="text-align: center;">SassConf site with normal vision</figcaption>
+			</figure>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>How's SassConf look? Pretty good!</li>
+			  </ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>SassConf.com Deuteranopia vision</h2>
+		</hgroup>
+		<article>
+			<figure>
+				<img src="images/sassconf-color-test2.png" alt="SassConf site with Deuteranopia vision" />
+				<figcaption style="text-align: center; margin-top: -4em;">SassConf site with Deuteranopia vision</figcaption>
+			</figure>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>Even the hover color is discernible. Very nice.</li>
+			  </ul>
+			</section>
+		</aside>
+		<hgroup>
+		<h2>SassConf.com Deuteranopia vision</h2>
+		</hgroup>
+		<article>
+			<figure>
+				<img src="images/sassconf-color-test3.png" alt="SassConf site with Deuteranopia vision" />
+				<figcaption style="text-align: center; margin-top: -4em;">SassConf site with Deuteranopia vision</figcaption>
+			</figure>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>For demo, see <a href="colorblind/index.html">colorblind/index.html</a></li>
+			  </ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>Testing for Colorblindness: JavaScript</h2>
+		</hgroup>
+		<article class="smaller">
+			<p>Using simulate.js from <a href="http://mudcu.be/labs/index.php?dir=Color-Vision%2FJavascript%2F">http://mudcu.be/labs/</a></p>
+			<pre class="prettyprint" data-lang="JavaScript">var images = document.getElementsByTagName("img");
+for (var i = 0; i &lt; images.length; i++) {
+
+  Color.Vision.Simulate(images[i], {
+  <b>type: "Deuteranope",</b>
+    callback: function(canvas) {
+      document.body.appendChild(canvas);
+    }
+  });
+
+  Color.Vision.Simulate(images[i], {
+  <b>type: "Protanope",</b>
+    callback: function(canvas) {
+      document.body.appendChild(canvas);
+    }
+  });
+
+}</pre>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>First the regular image, then with deuteranomalous vision, then with protanomalous vision.</li>
+			  </ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>Testing for Colorblindness: JavaScript</h2>
+		</hgroup>
+		<article>
+			<figure>
+			  <img src="images/cb-fruit.jpg" alt="Fruit" style="width: 290px; margin-left: 1em" alt="Fruit basket" />
+			  <img src="images/cb-fruit-d.jpg" alt="Fruit" style="width: 290px; margin-left: 1em" alt="Fruit basket with simulated deuteranomalous vision" />
+			  <img src="images/cb-fruit-p.jpg" alt="Fruit" style="width: 290px; margin-left: 1em" alt="Fruit basket with simulated protanomalous vision" />
+			  <figcaption style="text-align: center; margin-bottom: 2em"><a href="http://commons.wikimedia.org/wiki/File%3AFruit_basket_alessi.JPG">Alessi fruit bowl, filled / Dirk Ingo Franke</a></figcaption>
+			</figure>
+			<figure>
+			  <img src="images/cb-kitteh.jpg" alt="Fruit" style="width: 290px; margin-left: 1em" alt="Kitteh " />
+			  <img src="images/cb-kitteh-d.jpg" alt="Fruit" style="width: 290px; margin-left: 1em" alt="Kitteh  with simulated deuteranomalous vision" />
+			  <img src="images/cb-kitteh-p.jpg" alt="Fruit" style="width: 290px; margin-left: 1em" alt="Kitteh  with simulated protanomalous vision" />
+			  <figcaption style="text-align: center;">Kitteh / <a href="https://www.flickr.com/photos/titrans/">quatre mains</a></figcaption>
+			</figure>
+		</article>
+	</slide>
+
+	<slide>
+	  <aside class="note">
+	  	<section>
+	  		<ul>
+	  			<li>http://kadavy.net/blog/posts/d4h-color-theory/</li>
+	  			<li>Shadows and highlights aren't just black or white.</li>
+	  			<li>They are <em>mixed</em> from the original color.</li>
+	  		</ul>
+	  	</section>
+	  </aside>
+	  <hgroup>
+	    <h2>Mixing your palette</h2>
+	  </hgroup>
+	  <article>
+		  <figure style="width: 75%">
+		    <img src="images/471096471.jpg" alt="Paintbrush with blue oil paint on a classical palette / ROMAOSLO" />
+		    <figcaption>Paintbrush with blue oil paint on a classical palette / ROMAOSLO</figcaption>
+		  </figure>
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+			  <ul>
+			  	<li>SVG shapes - can be styles with CSS, so Sass!</li>
+			  	<li>Uses paths to define shapes.</li>
+			  	<li>Classes on g elements.</li>
+			  </ul>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Mixing your palette (1/4)</h2>
+	  </hgroup>
+	  <article class="smaller">
+	    <pre class="prettyprint" data-lang="svg">&lt;svg id="thing" xmlns="http://www.w3.org/2000/svg" &gt;
+  &lt;g class="main"&gt;
+    &lt;polygon class="peak1" points="5,235 135,100 265,235" /&gt;
+    &lt;polygon class="peak2" points="135,235 265,10 395,235" /&gt;
+    &lt;polygon class="peak3" points="265,235 395,120 525,235" /&gt;
+  &lt;/g&gt;
+  &lt;g class="shadow"&gt;
+    &lt;polygon class="peak1" points="3,233 133,98 263,233" /&gt;
+    &lt;polygon class="peak2" points="133,233 263,8 393,233" /&gt;
+    &lt;polygon class="peak3" points="263,233 393,118 523,233" /&gt;
+  &lt;/g&gt;
+  &lt;g class="highlight"&gt;
+    &lt;polygon class="peak1" points="9,237 139,102 269,237" /&gt;
+    &lt;polygon class="peak2" points="139,237 269,12 399,237" /&gt;
+    &lt;polygon class="peak3" points="269,237 399,122 529,237" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+			<svg id="thing" xmlns="http://www.w3.org/2000/svg" version="1.1" width="550px" height="250px" style="position: relative; top: -100px; left: 40%">
+			  <g class="shadow" fill="transparent" stroke-width="1" stroke="blue">
+			    <polygon points="3,233 133,98 263,233" />
+			    <polygon points="133,233 263,8 393,233" />
+			    <polygon points="263,233 393,118 523,233" />
+			  </g>
+			  <g class="highlight" fill="transparent" stroke-width="1" stroke="orange">
+			    <polygon class="peak1" points="9,237 139,102 269,237" />
+			    <polygon class="peak2" points="139,237 269,12 399,237" />
+			    <polygon class="peak3" points="269,237 399,122 529,237" />
+			  </g>
+			  <g class="main" fill="transparent" stroke-width="1" stroke="black">
+			    <polygon class="peak1" points="5,235 135,100 265,235" />
+			    <polygon class="peak2" points="135,235 265,10 395,235" />
+			    <polygon class="peak3" points="265,235 395,120 525,235" />
+			  </g>
+			</svg>
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<p>For a base style, I've filled in the middle main peak with grey, and the other two with a lighter and darker grey. The highlight and shadow peaks got outlines, white and black.</p>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Mixing your palette (2/4)</h2>
+	  </hgroup>
+	  <article>
+	    <pre class="prettyprint" data-lang="scss"><b>$mountain-color: #686;</b>
+.peak2 { fill: <b>$mountain-color;</b> }
+.peak1 { fill: <b>darken($mountain-color, 10%);</b> // #506b50 }
+.peak3 { fill: <b>lighten($mountain-color, 10%);</b> // #81a081 }
+
+<b>$highlight: white;</b>
+<b>$shadow: black;</b>
+g.highlight {
+  fill: transparent;
+  <b>stroke: $highlight;</b>
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+g.shadow {
+  @extend g.highlight;
+  <b>stroke: $shadow;</b>
+}</pre>
+			<img src="images/demo-mixing-1.png" alt="Simple white highlights and black shadows" style="position: absolute; bottom: 3em; right: 2.5em;" />
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<p>Mixing 40% of the first color and 40% of the second.</p>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Mixing your palette (3/4)</h2>
+	  </hgroup>
+	  <article>
+	    <pre class="prettyprint" data-lang="scss"><b>$highlight: mix($mountain-color, white, 40%); // #c1cfc1</b>
+<b>$shadow: mix($mountain-color, black, 40%); // #283628</b>
+
+g.highlight {
+  fill: transparent;
+  stroke: $highlight;
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+
+g.shadow {
+  @extend g.highlight;
+  stroke: $shadow;
+}</pre>
+			<img src="images/demo-mixing-2.png" alt="Shaded highlights and shadows" style="position: absolute; bottom: 3em; right: 2.5em;" />
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<p>What if it's a brilliant orange sunset? Let's mix in some orange instead of white and black.</p>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Mixing your palette (4/4)</h2>
+	  </hgroup>
+	  <article>
+	    <pre class="prettyprint" data-lang="scss">$highlight-base: #FF5F00;
+$highlight: mix($mountain-color, <b>lighten($highlight-base, 20%)</b>, 20%); // #e09a66
+$shadow: mix($mountain-color, <b>darken($highlight-base, 20%)</b>, 20%); // #8e4814
+
+g.highlight {
+  fill: transparent;
+  stroke: $highlight;
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+
+g.shadow {
+  @extend g.highlight;
+  stroke: $shadow;
+}</pre>
+			<p><a href="http://cdpn.io/e/xeAbp">http://cdpn.io/e/xeAbp</a></p>
+			<img src="images/demo-mixing-3.png" alt="Orange highlights and shadows" style="position: absolute; bottom: 3em; right: 2.5em;" />
+	  </article>
+	</slide>
+
+	<slide>
+	  <aside class="note">
+	    <section>
+	      <ul>
+	      	<li>Darken and lighten don't <em>scale</em> the amount of black or white mixed in.</li>
+	        <li>http://revoltpuppy.com/articles/39</li>
+	      </ul>
+	    </section>
+	  </aside>
+	  <hgroup>
+	    <h2>Why <code>mix()</code>?</h2>
+	  </hgroup>
+	  <article>
+	    <style>table.C6538C,table.FF5F00{border:1px solid #000000;border-collapse:collapse;font-weight:bold;text-align:center;margin-bottom:2rem}table.C6538C td,table.FF5F00 td,table.C6538C td:first-child,table.FF5F00 td:first-child{border:1px solid #000000;padding:.4rem;width:4rem;color:white}table.C6538C td:hover,table.FF5F00 td:hover{color:black}table.C6538C,table.C6538C tr{background-color:#C6538C}table.C6538C tr.lighten td{background-color:#C6538C}table.C6538C tr.lighten td.x10{background-color:#d379a6}table.C6538C tr.lighten td.x20{background-color:#dfa0bf}table.C6538C tr.lighten td.x30{background-color:#ecc6d9}table.C6538C tr.lighten td.x40{background-color:#f9ecf2}table.C6538C tr.lighten td.x50{background-color:white}table.C6538C tr.lighten td.x60{background-color:white}table.C6538C tr.lighten td.x70{background-color:white}table.C6538C tr.lighten td.x80{background-color:white}table.C6538C tr.lighten td.x90{background-color:white}table.C6538C tr.lighten td.x100{background-color:white}table.C6538C tr.darken td{background-color:#C6538C}table.C6538C tr.darken td.x10{background-color:#ad3972}table.C6538C tr.darken td.x20{background-color:#862d59}table.C6538C tr.darken td.x30{background-color:#602040}table.C6538C tr.darken td.x40{background-color:#3a1326}table.C6538C tr.darken td.x50{background-color:#14060d}table.C6538C tr.darken td.x60{background-color:black}table.C6538C tr.darken td.x70{background-color:black}table.C6538C tr.darken td.x80{background-color:black}table.C6538C tr.darken td.x90{background-color:black}table.C6538C tr.darken td.x100{background-color:black}table.C6538C tr.mix td{background-color:#C6538C}table.C6538C tr.mix td.x10{background-color:#b24a7e}table.C6538C tr.mix td.x20{background-color:#9e4270}table.C6538C tr.mix td.x30{background-color:#8a3a62}table.C6538C tr.mix td.x40{background-color:#763154}table.C6538C tr.mix td.x50{background-color:#632946}table.C6538C tr.mix td.x60{background-color:#4f2138}table.C6538C tr.mix td.x70{background-color:#3b182a}table.C6538C tr.mix td.x80{background-color:#27101b}table.C6538C tr.mix td.x90{background-color:#13080d}table.C6538C tr.mix td.x100{background-color:black}table.FF5F00,table.FF5F00 tr{background-color:#FF5F00}table.FF5F00 tr.lighten td{background-color:#FF5F00}table.FF5F00 tr.lighten td.x10{background-color:#ff7f33}table.FF5F00 tr.lighten td.x20{background-color:#ff9f66}table.FF5F00 tr.lighten td.x30{background-color:#ffbf99}table.FF5F00 tr.lighten td.x40{background-color:#ffdfcc}table.FF5F00 tr.lighten td.x50{background-color:white}table.FF5F00 tr.lighten td.x60{background-color:white}table.FF5F00 tr.lighten td.x70{background-color:white}table.FF5F00 tr.lighten td.x80{background-color:white}table.FF5F00 tr.lighten td.x90{background-color:white}table.FF5F00 tr.lighten td.x100{background-color:white}table.FF5F00 tr.darken td{background-color:#FF5F00}table.FF5F00 tr.darken td.x10{background-color:#cc4c00}table.FF5F00 tr.darken td.x20{background-color:#993900}table.FF5F00 tr.darken td.x30{background-color:#662600}table.FF5F00 tr.darken td.x40{background-color:#331300}table.FF5F00 tr.darken td.x50{background-color:black}table.FF5F00 tr.darken td.x60{background-color:black}table.FF5F00 tr.darken td.x70{background-color:black}table.FF5F00 tr.darken td.x80{background-color:black}table.FF5F00 tr.darken td.x90{background-color:black}table.FF5F00 tr.darken td.x100{background-color:black}table.FF5F00 tr.mix td{background-color:#FF5F00}table.FF5F00 tr.mix td.x10{background-color:#e55500}table.FF5F00 tr.mix td.x20{background-color:#cc4c00}table.FF5F00 tr.mix td.x30{background-color:#b24200}table.FF5F00 tr.mix td.x40{background-color:#993900}table.FF5F00 tr.mix td.x50{background-color:#7f2f00}table.FF5F00 tr.mix td.x60{background-color:#662600}table.FF5F00 tr.mix td.x70{background-color:#4c1c00}table.FF5F00 tr.mix td.x80{background-color:#321200}table.FF5F00 tr.mix td.x90{background-color:#190900}table.FF5F00 tr.mix td.x100{background-color:black}</style>
+	    <table class="C6538C">
+	      <tbody><tr>
+	        <td></td> <td>10%</td> <td>20%</td> <td>30%</td> <td>40%</td> <td>50%</td> <td>60%</td> <td>70%</td> <td>80%</td> <td>90%</td> <td>100%</td>
+	      </tr>
+	      <tr class="lighten">
+	        <td>lighten()</td> <td class="x10">#d379a6</td> <td class="x20">#dfa0bf</td> <td class="x30">#ecc6d9</td> <td class="x40">#f9ecf2</td> <td class="x50">#ffffff</td> <td class="x60">#ffffff</td> <td class="x70">#ffffff</td> <td class="x80">#ffffff</td> <td class="x90">#ffffff</td> <td class="x100">#ffffff</td>
+	      </tr>
+	        <tr class="darken">
+	        <td>darken()</td> <td class="x10">#ad3972</td> <td class="x20">#862d59</td> <td class="x30">#602040</td> <td class="x40">#3a1326</td> <td class="x50">#14060d</td> <td class="x60">#000000</td> <td class="x70">#000000</td> <td class="x80">#000000</td> <td class="x90">#000000</td> <td class="x100">#000000</td>
+	      </tr>
+	      <tr class="mix">
+	        <td>mix()</td> <td class="x10">#b24a7e</td> <td class="x20">#9e4270</td> <td class="x30">#8a3a62</td> <td class="x40">#763154</td> <td class="x50">#632946</td> <td class="x60">#4f2138</td> <td class="x70">#3b182a</td> <td class="x80">#27101b</td> <td class="x90">#13080d</td> <td class="x100">#000000</td>
+	      </tr>
+	    </tbody></table>
+	    <table class="FF5F00">
+	      <tbody><tr>
+	        <td></td> <td>10%</td> <td>20%</td> <td>30%</td> <td>40%</td> <td>50%</td> <td>60%</td> <td>70%</td> <td>80%</td> <td>90%</td> <td>100%</td>
+	      </tr>
+	      <tr class="lighten">
+	        <td>lighten()</td> <td class="x10">#ff7f33</td> <td class="x20">#ff9f66</td> <td class="x30">#ffbf99</td> <td class="x40">#ffdfcc</td> <td class="x50">#ffffff</td> <td class="x60">#ffffff</td> <td class="x70">#ffffff</td> <td class="x80">#ffffff</td> <td class="x90">#ffffff</td> <td class="x100">#ffffff</td>
+	      </tr>
+	        <tr class="darken">
+	        <td>darken()</td> <td class="x10">#cc4c00</td> <td class="x20">#993900</td> <td class="x30">#662600</td> <td class="x40">#331300</td> <td class="x50">#000000</td> <td class="x60">#000000</td> <td class="x70">#000000</td> <td class="x80">#000000</td> <td class="x90">#000000</td> <td class="x100">#000000</td>
+	      </tr>
+	      <tr class="mix">
+	        <td>mix()</td> <td class="x10">#e55500</td> <td class="x20">#cc4c00</td> <td class="x30">#b24200</td> <td class="x40">#993900</td> <td class="x50">#7f2f00</td> <td class="x60">#662600</td> <td class="x70">#4c1c00</td> <td class="x80">#321200</td> <td class="x90">#190900</td> <td class="x100">#000000</td>
+	      </tr>
+	    </tbody></table>
+	    <p><a href="http://cdpn.io/e/tejhz">http://cdpn.io/e/tejhz</a></p>
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<ul>
+					<li>http://www.arthints.com/what-is-atmospheric-perspective/</li>
+				</ul>
+			</section>
+		</aside>
+		<hgroup>
+			<h2>Distance: Photograph</h2>
+		</hgroup>
+		<article>
+			<figure class="right" style="width: 69%">
+			  <img src="images/466978051-2.jpg" alt="Mountain landscape / isabel tiessen pastor" />
+			  <figcaption>Mountain landscape / isabel tiessen pastor</figcaption>
+			</figure>
+			<ul>
+				<li>Smaller</li>
+				<li>Higher in frame</li>
+				<li>Less saturated, less contrast</li>
+			</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<hgroup>
+			<h2>Distance: Painting</h2>
+		</hgroup>
+		<article>
+		<figure class="right" style="width: 69%">
+		  <img src="images/147862818-2.jpg" alt="Landscape with fjords by Adelsteen Normann, oil on canvas / Fine Art Images" />
+		  <figcaption>Landscape with fjords by Adelsteen Normann, oil on canvas / Fine Art Images</figcaption>
+		</figure>
+		<ul>
+			<li>Smaller</li>
+			<li>Higher in frame</li>
+			<li>Less saturated, less contrast</li>
+			<li>Paler color, bluer</li>
+		</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<hgroup>
+			<h2>Distance: At Sunset</h2>
+		</hgroup>
+		<article>
+		<figure class="right" style="width: 69%">
+		  <img src="images/464686979-2.jpg" alt="lostin4tune - cedrik strahm - Switzerland" />
+		  <figcaption>lostin4tune - cedrik strahm - Switzerland</figcaption>
+		</figure>
+		<ul>
+			<li>Smaller</li>
+			<li>Higher in frame</li>
+			<li>Less saturated, less contrast</li>
+			<li>Paler color, bluer</li>
+			<li>More sky color</li>
+			<li>"Atmospheric perspective" or "aerial perspective"</li>
+		</ul>
+		</article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<p>More SVGs; groups identify hull and sails.</p>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Atmospheric Perspective (1/3)</h2>
+	  </hgroup>
+	  <article class="smaller">
+	    <pre class="prettyprint" data-lang="svg">&lt;svg version="1.1" width="400px" height="300px" [...] &gt;
+  &lt;g class="sail"&gt;
+    &lt;path d="M21.971,55.244c0,0-0.907-29.936,22.043-55.244c11.43,13.97,21.59,24.492,21.59, [...] /&gt;
+    [...]
+  &lt;/g&gt;
+  &lt;g class="hull"&gt;
+    &lt;path d="M86.649,58.691l-1.361,0.182l-0.544,4.082c0.544-0.182,0.998-0.272,1.451-0.362L86.649,58.691z" /&gt;
+    [...]
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+	    <pre class="prettyprint" data-lang="scss" style="float: left; width: 55%;">$sail: #33c;
+$hull: #633c09;
+
+.sail {
+  fill: $sail;
+}
+
+.hull {
+  fill: $hull;
+}</pre>
+			<img src="images/demo-distance-1.png" alt="A Boat" style="position: absolute; bottom: 3em; right: 2.5em;" />
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<ul>
+					<li>Let's start with the hull</li>
+					<li>We don't use <code>fade()</code>, because we don't want to adjust transparency.</li>
+				</ul>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Atmospheric Perspective (2/3)</h2>
+	  </hgroup>
+	  <article>
+	    <pre class="prettyprint" data-lang="scss" style="float: left; width: 55%;">$sail: #33c;
+$hull: #633c09;
+
+.hull {
+  fill: <b>mix($hull, white, 80%)</b>;
+}</pre>
+			<img src="images/demo-distance-2.png" alt="A Boat" style="position: absolute; bottom: 3em; right: 2.5em;" />
+	  </article>
+	</slide>
+
+	<slide>
+		<aside class="note">
+			<section>
+				<ul>
+					<li>Now the sail.</li>
+					<li>This time to fade, we'll mix the color with it's <em>complement</em>.</li>
+				</ul>
+			</section>
+		</aside>
+	  <hgroup>
+	    <h2>Demo: Atmospheric Perspective (3/3)</h2>
+	  </hgroup>
+	  <article>
+	    <pre class="prettyprint" data-lang="scss" style="float: left; width: 55%;">$sail: #33c;
+$hull: #633c09;
+
+.sail {
+  fill: mix($sail, <b>complement($sail)</b>, 70%);
+}</pre>
+			<img src="images/demo-distance-3.png" alt="A Boat" style="position: absolute; bottom: 3em; right: 2.5em;" />
+			<p style="float: left; clear: both;"><a href="http://cdpn.io/e/cvjHs">http://cdpn.io/e/cvjHs</a></p>
+	  </article>
+	</slide>
+
+	<slide class="thank-you-slide segue nobackground">
+		<aside class="gdbar right"><img src="images/sassconf.png"></aside>
+		<article class="flexbox vleft auto-fadein">
+			<h2>Thank You!</h2>
+		</article>
+		<p class="auto-fadein" data-config-contact>
+			<!-- populated from slide_config.json -->
+		</p>
+	</slide>
+
+	<slide class="backdrop"></slide>
+	<!-- Above is used for the "slide" background. -->
+
+</slides>
+
+</body>
+</html>
