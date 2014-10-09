@@ -17,7 +17,7 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Katie Kurkoski',
+    name: 'Katie K',
     company: 'Web Developer, Getty Images',
     twitter: '@KatieK2',
     www: 'http://www.pewpewlaser.com',
